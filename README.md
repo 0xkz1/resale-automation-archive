@@ -6,10 +6,10 @@ This repository contains a suite of Python scripts and automation tools I develo
 It acts as a complete data processing pipeline: scraping pricing data, normalizing item attributes, and seamlessly transferring updates between different services (e.g., executing cross-platform inventory syncs or generating listing manifests).
 
 ## Core Features
-1. **Multi-Source Scraping:** Robust HTML and API-based extraction logic capable of handling various marketplace structures and data formats.
-2. **Data Normalization Engine:** A core module that cleans raw datasets, handles character encoding issues, and transforms disparate marketplace attributes into a unified internal schema.
-3. **Automated Inventory Synchronization:** Headless browser integration and direct API requests to monitor stock levels and propagate price updates across disparate platforms in real-time.
-4. **Resilient Execution & Logging:** Implements exponential backoff for rate limits, comprehensive error handling for network volatility, and detailed log rotation to ensure high-availability without manual intervention.
+1. **Multi-Source Scraping:** Robust extraction logic (HTML/API) designed to handle dynamic content across various marketplace structures.
+2. **Data Normalization:** A processing engine that cleans raw data, manages character encoding, and maps marketplace-specific attributes to a unified internal schema.
+3. **Inventory Management:** Headless browser automation (Selenium) and direct API requests to monitor stock/pricing and propagate updates across platforms.
+4. **Resilient Error Handling:** Strategic use of `try...except` blocks and manual delays (`time.sleep`) to prevent connection timeouts, handle missing elements, and respect marketplace rate limits.
 
 ## Why I Built This
 This toolset was created to solve a real-world operational bottleneck. Moving products between marketplaces manually is error-prone and unscalable. By automating the extraction and posting logic, I could ensure data integrity while saving hundreds of hours of manual labor. 
@@ -26,10 +26,10 @@ This toolset was created to solve a real-world operational bottleneck. Moving pr
 商品の価格データの収集から属性の正規化、そして異なるサービス間でのデータ同期（例：クロスプラットフォームでの在庫連携や出品リストの自動生成）までを担う、End-to-Endのデータ処理パイプラインとして機能します。
 
 ## 主要な機能
-1. **マルチソース・スクレイピング:** 多様なマーケットプレイスの構造に対応し、HTMLやAPIから商品データを確実に抽出するロジックを実装。
-2. **データ正規化エンジン:** 未加工のデータセットをクレンジングし、文字コードの問題を解決した上で、各マーケットプレイス独自の属性を統一された内部スキーマに変換します。
-3. **自動在庫同期システム:** ヘッドレスブラウザや直接のAPIリクエストを組み合わせ、在庫レベルや価格変動をリアルタイムで監視し、プラットフォーム間で同期させます。
-4. **堅牢な実行環境とログ管理:** APIのレートリミットに対するエクスポネンシャルバックオフの実装や、ネットワークの不安定さに耐えるエラーハンドリング、詳細なログローテーションにより、無人での安定稼働を実現しています。
+1. **マルチソース・スクレイピング:** 動的なコンテンツを含む多様なマーケットプレイスの構造に対応し、HTMLやAPIから商品データを確実に抽出。
+2. **データ正規化エンジン:** 未加工のデータセットをクレンジングし、文字コードの問題を解決した上で、各マーケットプレイス独自の属性を統一された内部形式に変換します。
+3. **在庫管理の自動化:** Selenium（ヘッドレスブラウザ）や直接のAPIリクエストを組み合わせ、在庫レベルや価格変動を監視し、プラットフォーム間で自動同期させます。
+4. **エラーハンドリングと安定性:** `try...except` による例外処理と適切な待機時間（`time.sleep`）を組み合わせることで、通信エラーや要素の欠落への対応、およびサイト側の負荷制限を回避する設計にしています。
 
 ## 開発の背景
 このツールは、現実のオペレーションにおけるボトルネックを解消するために作成しました。マーケットプレイス間で手動で商品を移動・管理するのはミスが起きやすく、スケールしません。データ抽出から出品までのロジックをプログラマブルに処理することで、データの整合性を担保しつつ、膨大な手作業の時間を削減しました。
