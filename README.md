@@ -21,14 +21,14 @@ This project is a testament to the "muddy" and iterative process of professional
 - **Development Support Skills:** This archive demonstrates my ability to bridge gaps between manual processes and high-level automation—a core competency for Development Support and Pipeline roles.
 
 ## 📁 Business Process Pipeline & Code Mapping
-To maximize speed and efficiency, I designed the business pipeline primarily into 6 phases. I deliberately automated the most data-heavy phases (0 to 2) using Python, while leaving the latter phases (3 to 5) as manual operations because the ROI on automating them was too low at that time. This shows my ability to evaluate the true value of automation vs. manual effort.
+To maximize business launch speed, I focused my Python automation efforts strictly on the heavy data-processing phases. Physical and logistics-heavy phases were intentionally kept as manual operations to maintain quality control and avoid over-engineering.
 
-* **0. Research & 1. Profit Calculation (Fully Automated):**
+* **Research & Profit Calculation (Fully Automated):**
   * `mBall_yahoo6.py`, `zaico_yahoo.py` (Automated scraping, translation via `googletrans`, and profit margin calculation saving to Heroku DB).
-* **2. Listing / Exporting (Fully Automated):**
+* **Listing / Exporting (Fully Automated):**
   * `syuppin_ebay3.py`, `syuppin_ebay4.py` (CSV generation and automated browser UI manipulation via `Selenium` for bulk listing).
-* **3. Promotion / 4. Purchasing / 5. Shipping (Manual Operation):**
-  * Handled via manual review to maintain quality control and avoid over-engineering.
+* **Purchasing & Shipping (Manual Operation):**
+  * Deliberately handled via manual action and visual inspection to ensure product condition and shipping accuracy.
 
 ---
 
@@ -54,12 +54,12 @@ To maximize speed and efficiency, I designed the business pipeline primarily int
 - **Development Support職に向けて：** 手作業によるプロトタイプから高度な自動化へとワークフローを押し上げたこの経験は、クリエイターとエンジニアの橋渡しをし、現場の「詰まり」を解消する Development Support の職務に直結するものと確信しています。
 
 ## 📁 業務パイプラインとコードの対応関係
-当時の実際の業務は、以下のような業務フェーズに沿ったディレクトリ構成で管理し、各段階でPythonスクリプトを走らせていました。
-「何でもかんでも自動化する」のではなく、データ処理が重い前半フェーズ（0〜2）をプログラムで完全自動化し、残りのフェーズ（3〜5）はあえて費用対効果（ROI）の観点から人的リソースでカバーし、ビジネスの立ち上げ速度を最優先しました。
+当時の実際の業務は、ディレクトリ構成でフェーズを区切り、各段階でPythonスクリプトを走らせていました。
+「何でもかんでも自動化する」のではなく、データ処理が重いデータ収集・出品フェーズをプログラムで完全自動化し、物理的な確認が伴う仕入れ・発送フェーズはあえて人的リソースでカバーすることで、ビジネスの立ち上げ速度と品質管理を最優先しました。
 
-* **0. リサーチ / 1. 利益計算（完全自動化）:** 
+* **リサーチ / 利益計算（完全自動化）:** 
   * `mBall_yahoo6.py`, `zaico_yahoo.py` 等（国内データ収集、自動翻訳、各種手数料・送料判定を含んだ利益計算データベース構築）
-* **2. 出品（完全自動化）:**
+* **出品（完全自動化）:**
   * `syuppin_ebay3.py`, `syuppin_ebay4.py` （出品用CSVの生成、およびSeleniumを利用したツールのUI自動操縦による一括出品処理）
-* **3. 販促 / 4. 仕入れ / 5. 発送（手動オペレーション）:**
-  * 自動化の費用対効果とクオリティコントロールの観点から、意図的に目視と手作業のオペレーションとして残しました。
+* **仕入れ / 発送（手動オペレーション）:**
+  * 商品の状態確認や物流品質のクオリティコントロールを維持するため、意図的に目視と手作業のオペレーションとして残しました。
