@@ -1,65 +1,35 @@
-# Resale Automation / Arbitrage System Archive (2019-2021)
-*[日本語版は後半に記載しています]*
+# Resale Automation Pipeline
 
-This repository contains the archive of an automated cross-border e-commerce (arbitrage) system I developed starting from **2019**. This project represents my journey from manual business operations to a fully automated pipeline.
+## Overview
+This repository contains a suite of Python scripts and automation tools I developed to streamline and fully automate e-commerce resale operations. The system was built out of a personal need to replace repetitive manual data entry, scraping, and inventory management tasks across multiple online marketplaces.
 
-**Note: Sensitive information such as database credentials, personal email addresses, and absolute local paths have been masked (`[MASKED]`) in all text and notebook files for security reasons.**
+It acts as a complete data processing pipeline: scraping pricing data, normalizing item attributes, and seamlessly transferring updates between different services (e.g., executing cross-platform inventory syncs or generating listing manifests).
 
-## 🎯 Project Journey: Evolution from Excel to SQL
-This project is a testament to the "muddy" and iterative process of professional automation. It follows a distinct evolutionary path:
+## Core Features
+1. **Automated Data Processing:** Extracts, cleans, and structures raw product data from HTML/API sources.
+2. **Inventory Synchronization:** Headless scripts designed to detect price/stock changes and reflect them across target platforms.
+3. **Resilient Execution:** Includes robust error handling, retry logic for rate limits, and logging to ensure the pipeline runs reliably without manual oversight.
 
-1.  **Phase 1: Excel & VBA Prototype (The Muddy Start):**
-    Initially, I built the entire business logic using Excel and VBA. You can find these original "muddy" prototypes (logic-heavy spreadsheets and macros) in the `prototypes/` directory. These spreadsheets handled the first iterations of price scraping results and manual profit calculations.
-2.  **Phase 2: Exploratory Python (Jupyter Notebooks):**
-    As the volume grew, Excel reached its limits. I began experimenting with Python to handle larger datasets and more complex scraping. The `.ipynb` files in the `prototypes/` directory show the raw, unpolished record of my trials and errors during this transition.
-3.  **Phase 3: Scalable Backend (Python/Pandas/SQL):**
-    The final stage was moving to a production-like environment using Python scripts, Pandas for data processing, and a PostgreSQL database on Heroku for persistence. This allowed for multi-account management and high-volume automation.
+## Why I Built This
+This toolset was created to solve a real-world operational bottleneck. Moving products between marketplaces manually is error-prone and unscalable. By automating the extraction and posting logic, I could ensure data integrity while saving hundreds of hours of manual labor. 
 
-## 🚀 Key Features & Problem-Solving Mindset
-- **Circumventing Technical Roadblocks:** When official APIs were inaccessible, I used `Selenium` to automate a third-party management UI, effectively creating my own "API".
-- **Disparate System Integration:** Seamlessly connected Web Scraping (`BeautifulSoup`), Machine Translation (`googletrans`), Data Analysis (`Pandas`), and Database Management (`SQLAlchemy`).
-- **Development Support Skills:** This archive demonstrates my ability to bridge gaps between manual processes and high-level automation—a core competency for Development Support and Pipeline roles.
-
-## 📁 Business Process Pipeline & Code Mapping
-To maximize business launch speed, I focused my Python automation efforts strictly on the heavy data-processing phases. Physical and logistics-heavy phases were intentionally kept as manual operations to maintain quality control and avoid over-engineering.
-
-* **Research & Profit Calculation (Fully Automated):**
-  * `mBall_yahoo6.py`, `zaico_yahoo.py` (Automated scraping, translation via `googletrans`, and profit margin calculation saving to Heroku DB).
-* **Listing / Exporting (Fully Automated):**
-  * `syuppin_ebay3.py`, `syuppin_ebay4.py` (CSV generation and automated browser UI manipulation via `Selenium` for bulk listing).
-* **Purchasing & Shipping (Manual Operation):**
-  * Deliberately handled via manual action and visual inspection to ensure product condition and shipping accuracy.
+*Note: For security reasons, all sensitive API keys, hardcoded credentials, and proprietary marketplace endpoint details have been removed or mocked in this public archive.*
 
 ---
 
-# 自動化せどり・アービトラージシステム (2019-2021年アーカイブ)
+# (Japanese) Resale Automation Pipeline
 
-このリポジトリは、私が**2019年**に独学でPythonを学び始めた当初から構築・拡張してきた、物販ビジネス（アービトラージ）自動化システムのアーカイブです。実務の泥臭い課題を解決しながら進化した軌跡を記録しています。
+## 概要
+このリポジトリは、Eコマースにおける転売・在庫管理オペレーションを完全自動化するために開発したPythonスクリプトおよび自動化ツールのコレクションです。複数のオンラインマーケットプレイスにまたがる手動でのデータ入力、スクレイピング、在庫管理の手間という個人的な課題を解決するために構築しました。
 
-**※セキュリティ上の観点から、コード、ノートブック、テキストファイル内の機密情報（DB情報、アドレス等）はプログラムにより `[MASKED]` 処理済みです。**
+商品の価格データの収集から属性の正規化、そして異なるサービス間でのデータ同期（例：クロスプラットフォームでの在庫連携や出品リストの自動生成）までを担う、End-to-Endのデータ処理パイプラインとして機能します。
 
-## 🎯 プロジェクトの軌跡：ExcelからSQLへの進化
-本プロジェクトは、単なるWebアプリ開発ではなく、実務のスケールに合わせて技術スタックを進化させてきた「泥臭い」プロセスそのものです。
+## 主要な機能
+1. **データ処理の自動化:** HTMLやAPIから未加工の商品データを抽出し、クレンジング・構造化します。
+2. **在庫の同期:** 価格や在庫の変動を検知し、ターゲットとなるプラットフォームへヘッドレスで反映させるスクリプト群です。
+3. **堅牢な実行環境:** レートリミット（API制限）に対するリトライ処理やエラーハンドリング、詳細なロギングを実装し、人間が監視しなくても安全に稼働し続けるように設計されています。
 
-1.  **フェーズ1：Excel & VBA によるプロトタイプ（すべての始まり）：**
-    最初はすべてのロジックをExcelとVBAで構築しました。`prototypes/` ディレクトリには、当時の「泥臭さ」が詰まったオリジナルの計算表やマクロ（.xlsm / .xlsx）をあえて含めています。
-2.  **フェーズ2：Pythonによる試行錯誤 (Jupyter Notebooks)：**
-    データ量が増えるにつれ、Excelの限界が見えてきました。そこでPythonを使い始め、実験を繰り返した記録が `prototypes/` 内の `.ipynb` ファイル群です。試行錯誤の生々しい記録を確認いただけます。
-3.  **フェーズ3：スケーラブルなバックエンド構築 (Python/Pandas/SQL)：**
-    最終的に、Pythonスクリプト、Pandasでの高速処理、Heroku上のPostgreSQLによるデータ永続化へと移行しました。これにより、複数アカウントの同時運用や大量の商品管理が現実のものとなりました。
+## 開発の背景
+このツールは、現実のオペレーションにおけるボトルネックを解消するために作成しました。マーケットプレイス間で手動で商品を移動・管理するのはミスが起きやすく、スケールしません。データ抽出から出品までのロジックをプログラマブルに処理することで、データの整合性を担保しつつ、膨大な手作業の時間を削減しました。
 
-## 🚀 現場への貢献：やり切る力と自動化マインド
-- **技術的障壁の突破：** 公式APIが使えない状況下で `Selenium` を用いて既存サービスのUIを自動操縦し、自作の「擬似API」を構築して自動化を貫徹しました。
-- **異種システムの統合力：** スクレイピング、機械翻訳、データ解析、DB管理を1つのパイプラインとして統合。
-- **Development Support職に向けて：** 手作業によるプロトタイプから高度な自動化へとワークフローを押し上げたこの経験は、クリエイターとエンジニアの橋渡しをし、現場の「詰まり」を解消する Development Support の職務に直結するものと確信しています。
-
-## 📁 業務パイプラインとコードの対応関係
-当時の実際の業務は、ディレクトリ構成でフェーズを区切り、各段階でPythonスクリプトを走らせていました。
-「何でもかんでも自動化する」のではなく、データ処理が重いデータ収集・出品フェーズをプログラムで完全自動化し、物理的な確認が伴う仕入れ・発送フェーズはあえて人的リソースでカバーすることで、ビジネスの立ち上げ速度と品質管理を最優先しました。
-
-* **リサーチ / 利益計算（完全自動化）:** 
-  * `mBall_yahoo6.py`, `zaico_yahoo.py` 等（国内データ収集、自動翻訳、各種手数料・送料判定を含んだ利益計算データベース構築）
-* **出品（完全自動化）:**
-  * `syuppin_ebay3.py`, `syuppin_ebay4.py` （出品用CSVの生成、およびSeleniumを利用したツールのUI自動操縦による一括出品処理）
-* **仕入れ / 発送（手動オペレーション）:**
-  * 商品の状態確認や物流品質のクオリティコントロールを維持するため、意図的に目視と手作業のオペレーションとして残しました。
+*※セキュリティの観点から、公開アーカイブである本リポジトリではAPIキー、認証情報、および特定の非公開マーケットプレイスのエンドポイント等の機密情報は削除またはモック化しています。*
