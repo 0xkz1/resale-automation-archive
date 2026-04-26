@@ -9,9 +9,9 @@ This repository contains the archive of an automated cross-border e-commerce (ar
 This project is a testament to the "muddy" and iterative process of professional automation. It follows a distinct evolutionary path:
 
 1.  **Phase 1: Excel & VBA Prototype (The Muddy Start):**
-    Initially, I built the entire business logic using Excel and VBA. You can find these original "muddy" prototypes (logic-heavy spreadsheets and macros) in the `evolution/` directory. These spreadsheets handled the first iterations of price scraping results and manual profit calculations.
+    Initially, I built the entire business logic using Excel and VBA. You can find these original "muddy" prototypes (logic-heavy spreadsheets and macros) in the `prototypes/` directory. These spreadsheets handled the first iterations of price scraping results and manual profit calculations.
 2.  **Phase 2: Exploratory Python (Jupyter Notebooks):**
-    As the volume grew, Excel reached its limits. I began experimenting with Python to handle larger datasets and more complex scraping. The `.ipynb` files in the `evolution/` directory show the raw, unpolished record of my trials and errors during this transition.
+    As the volume grew, Excel reached its limits. I began experimenting with Python to handle larger datasets and more complex scraping. The `.ipynb` files in the `prototypes/` directory show the raw, unpolished record of my trials and errors during this transition.
 3.  **Phase 3: Scalable Backend (Python/Pandas/SQL):**
     The final stage was moving to a production-like environment using Python scripts, Pandas for data processing, and a PostgreSQL database on Heroku for persistence. This allowed for multi-account management and high-volume automation.
 
@@ -32,9 +32,9 @@ This project is a testament to the "muddy" and iterative process of professional
 本プロジェクトは、単なるWebアプリ開発ではなく、実務のスケールに合わせて技術スタックを進化させてきた「泥臭い」プロセスそのものです。
 
 1.  **フェーズ1：Excel & VBA によるプロトタイプ（すべての始まり）：**
-    最初はすべてのロジックをExcelとVBAで構築しました。`evolution/` ディレクトリには、当時の「泥臭さ」が詰まったオリジナルの計算表やマクロ（.xlsm / .xlsx）をあえて含めています。
+    最初はすべてのロジックをExcelとVBAで構築しました。`prototypes/` ディレクトリには、当時の「泥臭さ」が詰まったオリジナルの計算表やマクロ（.xlsm / .xlsx）をあえて含めています。
 2.  **フェーズ2：Pythonによる試行錯誤 (Jupyter Notebooks)：**
-    データ量が増えるにつれ、Excelの限界が見えてきました。そこでPythonを使い始め、実験を繰り返した記録が `evolution/` 内の `.ipynb` ファイル群です。試行錯誤の生々しい記録を確認いただけます。
+    データ量が増えるにつれ、Excelの限界が見えてきました。そこでPythonを使い始め、実験を繰り返した記録が `prototypes/` 内の `.ipynb` ファイル群です。試行錯誤の生々しい記録を確認いただけます。
 3.  **フェーズ3：スケーラブルなバックエンド構築 (Python/Pandas/SQL)：**
     最終的に、Pythonスクリプト、Pandasでの高速処理、Heroku上のPostgreSQLによるデータ永続化へと移行しました。これにより、複数アカウントの同時運用や大量の商品管理が現実のものとなりました。
 
