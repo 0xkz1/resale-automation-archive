@@ -10,13 +10,21 @@ It acts as a complete data processing pipeline: scraping pricing data, normalizi
 ```mermaid
 timeline
     title Learning Timeline (2019-2021)
+    section 2019
     2019 July Start : Python Basics, Resale Basics
+    style 2019 July Start fill:#ffffff,stroke:#333333,color:#000000
+    section 2020 First Half
     2020 First Half : Excel & VBA (Basic Spreadsheet) --> Manual Data Aggregation & Simple Automation
                 --> Evidence: .xlsm files in prototypes/
+    style 2020 First Half fill:#f0f0f0,stroke:#333333,color:#000000
+    section 2020 Second Half
     2020 Second Half : Pandas, Numpy, Jupyter Notebook --> Scraped Data Cleaning & Profit Calculation
                 --> Evidence: Notebooks like mBall_yahoo4.ipynb
+    style 2020 Second Half fill:#778899,stroke:#333333,color:#ffffff
+    section 2021 First Half
     2021 First Half : Selenium, SQL, API Integration --> Browser Automation + DB Storage + Auto Listing
                 --> Evidence: syuppin_ebay*.py, local-heroku_sql.py
+    style 2021 First Half fill:#606060,stroke:#333333,color:#ffffff
 ```
 
 ## Pipeline Architecture
@@ -48,13 +56,21 @@ This toolset was created to solve a real-world operational bottleneck. Moving pr
 ```mermaid
 timeline
     title 独学での技術習得の歩み（2019〜2021）
+    section 2019
     2019 7月開始 : Python基礎, Resale基礎
+    style 2019 7月開始 fill:#ffffff,stroke:#333333,color:#000000
+    section 2020 前半
     2020 前半 : Excel・VBA（表計算の基本） --> 手作業のデータ集計・簡易自動化
             --> 証拠：prototypes/ 内の .xlsm ファイル
+    style 2020 前半 fill:#f0f0f0,stroke:#333333,color:#000000
+    section 2020 後半
     2020 後半 : Pandas, Numpy, Jupyter Notebook --> スクレイピングデータの整形・利益計算
             --> 証拠：mBall_yahoo4.ipynb などの Notebook
+    style 2020 後半 fill:#778899,stroke:#333333,color:#ffffff
+    section 2021 前半
     2021 前半 : Selenium・SQL・API連携 --> ブラウザ自動操作＋DB保存＋自動出品
             --> 証拠：syuppin_ebay*.py, local-heroku_sql.py
+    style 2021 前半 fill:#606060,stroke:#333333,color:#ffffff
 ```
 
 ## パイプラインの構成
