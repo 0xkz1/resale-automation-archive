@@ -1,5 +1,18 @@
 # Resale Automation Pipeline
 
+```mermaid
+timeline
+    title 独学での技術習得の歩み（2019〜2021）
+    2019 7月開始 : Python基礎, Resale基礎
+    2020 前半 : Excel・VBA（表計算の基本） --> 手作業のデータ集計・簡易自動化
+                --> 証拠：prototypes/ 内の .xlsm ファイル
+    2020 後半 : Pandas, Numpy, Jupyter Notebook --> スクレイピングデータの整形・利益計算
+                --> 証拠：mBall_yahoo4.ipynb などの Notebook
+    2021 前半 : Selenium・SQL・API連携 --> ブラウザ自動操縦＋DB保存＋自動出品
+                --> 証拠：syuppin_ebay*.py, local-heroku_sql.py
+    2021 後半 : エラーハンドリング・ロギング --> 安定運用・メンテナンス性の向上
+                --> 証拠：各スクリプトの try...except と time.sleep
+```
 ## Overview
 This repository contains a suite of Python scripts and automation tools I developed to streamline and fully automate e-commerce resale operations. The system was built out of a personal need to replace repetitive manual data entry, scraping, and inventory management tasks across multiple online marketplaces.
 
