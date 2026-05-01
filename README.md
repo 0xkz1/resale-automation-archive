@@ -57,15 +57,27 @@ This toolset was created to solve a real-world operational bottleneck. Moving pr
 ## 独学での技術習得の歩み
 
 ```mermaid
-timeline
+gantt
     title 独学での技術習得の歩み（2019〜2021）
-    2019 7月開始 : Python基礎, Resale基礎
-    2020 前半 : Excel・VBA（表計算の基本） --> 手作業のデータ集計・簡易自動化
-            --> 証拠：prototypes/ 内の .xlsm ファイル
-    2020 後半 : Pandas, Numpy, Jupyter Notebook --> スクレイピングデータの整形・利益計算
-            --> 証拠：mBall_yahoo4.ipynb などの Notebook
-    2021 前半 : Selenium・SQL・API連携 --> ブラウザ自動操作＋DB保存＋自動出品
-            --> 証拠：syuppin_ebay*.py, local-heroku_sql.py
+    dateFormat YYYY-MM-DD
+    axisFormat %Y-%m
+
+    section 2019
+    Python基礎 Resale基礎 :t1, 2019-07-01, 2019-12-31
+
+    section 2020 前半
+    Excel VBA 表計算の基本 :t2, 2020-01-01, 2020-06-30
+
+    section 2020 後半
+    Pandas Numpy Jupyter Notebook :t3, 2020-07-01, 2020-12-31
+
+    section 2021 前半
+    Selenium SQL API連携 :t4, 2021-01-01, 2021-06-30
+
+    style t1 fill:#FFFFFF,stroke:#333
+    style t2 fill:#808080,stroke:#333
+    style t3 fill:#6C7B8B,stroke:#333
+    style t4 fill:#000000,stroke:#333,color:#FFFFFF
 ```
 
 ## パイプラインの構成
