@@ -17,8 +17,6 @@ timeline
                 --> Evidence: Notebooks like mBall_yahoo4.ipynb
     2021 First Half : Selenium, SQL, API Integration --> Browser Automation + DB Storage + Auto Listing
                 --> Evidence: syuppin_ebay*.py, local-heroku_sql.py
-    2021 Second Half : Error Handling & Logging --> Stable Operation & Improved Maintainability
-                --> Evidence: try...except and time.sleep in scripts
 ```
 
 ## Pipeline Architecture
@@ -57,8 +55,6 @@ timeline
             --> 証拠：mBall_yahoo4.ipynb などの Notebook
     2021 前半 : Selenium・SQL・API連携 --> ブラウザ自動操作＋DB保存＋自動出品
             --> 証拠：syuppin_ebay*.py, local-heroku_sql.py
-    2021 後半 : エラーハンドリング・ロギング --> 安定運用・メンテナンス性の向上
-            --> 証拠：各スクリプトの try...except と time.sleep
 ```
 
 ## パイプラインの構成
