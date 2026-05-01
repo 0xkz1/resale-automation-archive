@@ -1,4 +1,5 @@
 # Resale Automation Pipeline
+
 ## Overview
 This repository contains a suite of Python scripts and automation tools I developed to streamline and fully automate e-commerce resale operations. The system was built out of a personal need to replace repetitive manual data entry, scraping, and inventory management tasks across multiple online marketplaces.
 
@@ -19,16 +20,16 @@ timeline
     2021 Second Half : Error Handling & Logging --> Stable Operation & Improved Maintainability
                 --> Evidence: try...except and time.sleep in scripts
 ```
- 
+
 ## Pipeline Architecture
 1. **Scraping Layer (Multi-Source):** `mBall_yahoo*.py`
-   - Uses Selenium and Requests to handle dynamic content and extract raw product data from Yahoo and other sources.
+    - Uses Selenium and Requests to handle dynamic content and extract raw product data from Yahoo and other sources.
 2. **Data Processing & Normalization:** `local-heroku_sql.py` / `prototypes/*.ipynb`
-   - Cleans raw input, resolves encoding issues, and maps marketplace attributes to a unified database schema.
+    - Cleans raw input, resolves encoding issues, and maps marketplace attributes to a unified database schema.
 3. **Automated Sync & Listing:** `syuppin_ebay*.py` / `zaico_yahoo.py`
-   - Handles automated cross-platform listing on eBay and inventory synchronization with external services like Zaico.
+    - Handles automated cross-platform listing on eBay and inventory synchronization with external services like Zaico.
 4. **Execution Stability:** (Built into all scripts)
-   - Strategic use of `try...except` and `time.sleep` to handle network timeouts and respect rate limits.
+    - Strategic use of `try...except` and `time.sleep` to handle network timeouts and respect rate limits.
 
 ## Why I Built This
 This toolset was created to solve a real-world operational bottleneck. Moving products between marketplaces manually is error-prone and unscalable. By automating the extraction and posting logic, I could ensure data integrity while saving hundreds of hours of manual labor. 
@@ -44,21 +45,6 @@ This toolset was created to solve a real-world operational bottleneck. Moving pr
 
 商品の価格データの収集から属性の正規化、そして異なるサービス間でのデータ同期（例：クロスプラットフォームでの在庫連携や出品リストの自動生成）までを担う、End-to-Endのデータ処理パイプラインとして機能します。
 
-## パイプラインの構成
-1. **スクレイピング層 (マルチソース対応):** `mBall_yahoo*.py`
-   - SeleniumやRequestsを用い、Yahoo等の複雑なサイト構造から商品データを抽出します。
-2. **データの整形と正規化:** `local-heroku_sql.py` / `prototypes/*.ipynb`
-   - 未加工のデータをクレンジングし、内部DBや共通フォーマットに変換・正規化します。
-3. **在庫・価格の自動同期:** `syuppin_ebay*.py` / `zaico_yahoo.py`
-   - eBayへの自動出品や、Zaico等の外部ツールと連携した在庫の自動同期を担います。
-4. **実行の安定化:** (各スクリプトに実装)
-   - `try...except` による例外処理と `time.sleep` を組み合わせ、制限回避と安定稼働を両立させています。
-
-## 開発の背景
-このツールは、現実のオペレーションにおけるボトルネックを解消するために作成しました。マーケットプレイス間で手動で商品を移動・管理するのはミスが起きやすく、スケールしません。データ抽出から出品までのロジックをプログラマブルに処理することで、データの整合性を担保しつつ、膨大な手作業の時間を削減しました。
-
-*※セキュリティの観点から、公開アーカイブである本リポジトリではAPIキー、認証情報、および特定の非公開マーケットプレイスのエンドポイント等の機密情報は削除またはモック化しています。*
-
 ## 独学での技術習得の歩み
 
 ```mermaid
@@ -66,11 +52,26 @@ timeline
     title 独学での技術習得の歩み（2019〜2021）
     2019 7月開始 : Python基礎, Resale基礎
     2020 前半 : Excel・VBA（表計算の基本） --> 手作業のデータ集計・簡易自動化
-                --> 証拠：prototypes/ 内の .xlsm ファイル
+            --> 証拠：prototypes/ 内の .xlsm ファイル
     2020 後半 : Pandas, Numpy, Jupyter Notebook --> スクレイピングデータの整形・利益計算
-                --> 証拠：mBall_yahoo4.ipynb などの Notebook
-    2021 前半 : Selenium・SQL・API連携 --> ブラウザ自動操縦＋DB保存＋自動出品
-                --> 証拠：syuppin_ebay*.py, local-heroku_sql.py
+            --> 証拠：mBall_yahoo4.ipynb などの Notebook
+    2021 前半 : Selenium・SQL・API連携 --> ブラウザ自動操作＋DB保存＋自動出品
+            --> 証拠：syuppin_ebay*.py, local-heroku_sql.py
     2021 後半 : エラーハンドリング・ロギング --> 安定運用・メンテナンス性の向上
-                --> 証拠：各スクリプトの try...except と time.sleep
+            --> 証拠：各スクリプトの try...except と time.sleep
 ```
+
+## パイプラインの構成
+1. **スクレイピング層 (マルチソース対応):** `mBall_yahoo*.py`
+    - SeleniumやRequestsを用い、Yahoo等の複雑なサイト構造から商品データを抽出します。
+2. **データの整形と正規化:** `local-heroku_sql.py` / `prototypes/*.ipynb`
+    - 未加工のデータをクレンジングし、内部DBや共通フォーマットに変換・正規化します。
+3. **在庫・価格の自動同期:** `syuppin_ebay*.py` / `zaico_yahoo.py`
+    - eBayへの自動出品や、Zaico等の外部ツールと連携した在庫の自動同期を担います。
+4. **実行の安定化:** (各スクリプトに実装)
+    - `try...except` による例外処理と `time.sleep` を組み合わせ、制限回避と安定稼働を両立させています。
+
+## 開発の背景
+このツールは、現実のオペレーションにおけるボトルネックを解消するために作成しました。マーケットプレイス間で手動で商品を移動・管理するのはミスが起きやすく、スケールしません。データ抽出から出品までのロジックをプログラマブルに処理することで、データの整合性を担保しつつ、膨大な手作業の時間を削減しました。
+
+*※セキュリティの観点から、公開アーカイブである本リポジトリではAPIキー、認証情報、および特定の非公開マーケットプレイスのエンドポイント等の機密情報は削除またはモック化しています。*
