@@ -8,15 +8,26 @@ It acts as a complete data processing pipeline: scraping pricing data, normalizi
 ## Learning Timeline (2019-2021)
 
 ```mermaid
-timeline
+gantt
     title Learning Timeline (2019-2021)
-    2019 July Start : Python Basics, Resale Basics
-    2020 First Half : Excel & VBA (Basic Spreadsheet) --> Manual Data Aggregation & Simple Automation
-                --> Evidence: .xlsm files in prototypes/
-    2020 Second Half : Pandas, Numpy, Jupyter Notebook --> Scraped Data Cleaning & Profit Calculation
-                --> Evidence: Notebooks like mBall_yahoo4.ipynb
-    2021 First Half : Selenium, SQL, API Integration --> Browser Automation + DB Storage + Auto Listing
-                --> Evidence: syuppin_ebay*.py, local-heroku_sql.py
+    dateFormat YYYY-MM-DD
+    axisFormat %Y-%m
+
+    section 2019
+    Python Basics, Resale Basics :t1, 2019-07-01, 2019-12-31
+    style t1 fill:#FFFFFF,stroke:#333
+
+    section 2020 First Half
+    Excel & VBA (Basic Spreadsheet) :t2, 2020-01-01, 2020-06-30
+    style t2 fill:#808080,stroke:#333
+
+    section 2020 Second Half
+    Pandas, Numpy, Jupyter Notebook :t3, 2020-07-01, 2020-12-31
+    style t3 fill:#6C7B8B,stroke:#333
+
+    section 2021 First Half
+    Selenium, SQL, API Integration :t4, 2021-01-01, 2021-06-30
+    style t4 fill:#000000,stroke:#333,color:#FFFFFF
 ```
 
 ## Pipeline Architecture
