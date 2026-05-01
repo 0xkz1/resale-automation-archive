@@ -1,23 +1,25 @@
 # Resale Automation Pipeline
-
-```mermaid
-timeline
-    title 独学での技術習得の歩み（2019〜2021）
-    2019 7月開始 : Python基礎, Resale基礎
-    2020 前半 : Excel・VBA（表計算の基本） --> 手作業のデータ集計・簡易自動化
-                --> 証拠：prototypes/ 内の .xlsm ファイル
-    2020 後半 : Pandas, Numpy, Jupyter Notebook --> スクレイピングデータの整形・利益計算
-                --> 証拠：mBall_yahoo4.ipynb などの Notebook
-    2021 前半 : Selenium・SQL・API連携 --> ブラウザ自動操縦＋DB保存＋自動出品
-                --> 証拠：syuppin_ebay*.py, local-heroku_sql.py
-    2021 後半 : エラーハンドリング・ロギング --> 安定運用・メンテナンス性の向上
-                --> 証拠：各スクリプトの try...except と time.sleep
-```
 ## Overview
 This repository contains a suite of Python scripts and automation tools I developed to streamline and fully automate e-commerce resale operations. The system was built out of a personal need to replace repetitive manual data entry, scraping, and inventory management tasks across multiple online marketplaces.
 
 It acts as a complete data processing pipeline: scraping pricing data, normalizing item attributes, and seamlessly transferring updates between different services (e.g., executing cross-platform inventory syncs or generating listing manifests).
 
+## Learning Timeline (2019-2021)
+
+```mermaid
+timeline
+    title Learning Timeline (2019-2021)
+    2019 July Start : Python Basics, Resale Basics
+    2020 First Half : Excel & VBA (Basic Spreadsheet) --> Manual Data Aggregation & Simple Automation
+                --> Evidence: .xlsm files in prototypes/
+    2020 Second Half : Pandas, Numpy, Jupyter Notebook --> Scraped Data Cleaning & Profit Calculation
+                --> Evidence: Notebooks like mBall_yahoo4.ipynb
+    2021 First Half : Selenium, SQL, API Integration --> Browser Automation + DB Storage + Auto Listing
+                --> Evidence: syuppin_ebay*.py, local-heroku_sql.py
+    2021 Second Half : Error Handling & Logging --> Stable Operation & Improved Maintainability
+                --> Evidence: try...except and time.sleep in scripts
+```
+ 
 ## Pipeline Architecture
 1. **Scraping Layer (Multi-Source):** `mBall_yahoo*.py`
    - Uses Selenium and Requests to handle dynamic content and extract raw product data from Yahoo and other sources.
@@ -56,3 +58,19 @@ This toolset was created to solve a real-world operational bottleneck. Moving pr
 このツールは、現実のオペレーションにおけるボトルネックを解消するために作成しました。マーケットプレイス間で手動で商品を移動・管理するのはミスが起きやすく、スケールしません。データ抽出から出品までのロジックをプログラマブルに処理することで、データの整合性を担保しつつ、膨大な手作業の時間を削減しました。
 
 *※セキュリティの観点から、公開アーカイブである本リポジトリではAPIキー、認証情報、および特定の非公開マーケットプレイスのエンドポイント等の機密情報は削除またはモック化しています。*
+
+## 独学での技術習得の歩み
+
+```mermaid
+timeline
+    title 独学での技術習得の歩み（2019〜2021）
+    2019 7月開始 : Python基礎, Resale基礎
+    2020 前半 : Excel・VBA（表計算の基本） --> 手作業のデータ集計・簡易自動化
+                --> 証拠：prototypes/ 内の .xlsm ファイル
+    2020 後半 : Pandas, Numpy, Jupyter Notebook --> スクレイピングデータの整形・利益計算
+                --> 証拠：mBall_yahoo4.ipynb などの Notebook
+    2021 前半 : Selenium・SQL・API連携 --> ブラウザ自動操縦＋DB保存＋自動出品
+                --> 証拠：syuppin_ebay*.py, local-heroku_sql.py
+    2021 後半 : エラーハンドリング・ロギング --> 安定運用・メンテナンス性の向上
+                --> 証拠：各スクリプトの try...except と time.sleep
+```
