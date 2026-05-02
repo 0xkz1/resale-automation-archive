@@ -13,29 +13,17 @@ gantt
     dateFormat YYYY-MM-DD
     axisFormat %Y-%m
 
-    section 2019 Q3
-    Python Basics Start :t1, 2019-07-01, 2019-09-30
-
-    section 2019 Q4
-    Resale Basics, Python Practice :t2, 2019-10-01, 2019-12-31
+    section 2019
+    Python Basic :t1, 2019-07-01, 2019-12-31
 
     section 2020 Q1
-    Excel & VBA Basics :t3, 2020-01-01, 2020-03-31
+    Excel & VBA :t2, 2020-01-01, 2020-03-31
 
-    section 2020 Q2
-    Manual Automation, Data Aggregation :t4, 2020-04-01, 2020-06-30
+    section 2020 Q2-Q3
+    Pandas, Numpy, Jupyter :t3, 2020-04-01, 2020-07-31
 
-    section 2020 Q3
-    Pandas, Numpy Introduction :t5, 2020-07-01, 2020-09-30
-
-    section 2020 Q4
-    Jupyter Notebook, Data Cleaning :t6, 2020-10-01, 2020-12-31
-
-    section 2021 Q1
-    Selenium, SQL Basics :t7, 2021-01-01, 2021-03-31
-
-    section 2021 Q2
-    API Integration, Auto Listing :t8, 2021-04-01, 2021-06-30
+    section 2020 Q3-2021 Q1
+    Selenium, SQL :t4, 2020-08-01, 2021-02-28
 ```
 
 ## Pipeline Architecture
@@ -70,29 +58,17 @@ gantt
     dateFormat YYYY-MM-DD
     axisFormat %Y-%m
 
-    section 2019 Q3
-    Python基礎 開始 :t1, 2019-07-01, 2019-09-30
-
-    section 2019 Q4
-    Resale基礎, Python練習 :t2, 2019-10-01, 2019-12-31
+    section 2019
+    Python基礎 :t1, 2019-07-01, 2019-12-31
 
     section 2020 Q1
-    Excel VBA 基本 :t3, 2020-01-01, 2020-03-31
+    Excel VBA :t2, 2020-01-01, 2020-03-31
 
-    section 2020 Q2
-    手作業自動化, データ集計 :t4, 2020-04-01, 2020-06-30
+    section 2020 Q2-Q3
+    Pandas, Numpy, Jupyter :t3, 2020-04-01, 2020-07-31
 
-    section 2020 Q3
-    Pandas, Numpy 入門 :t5, 2020-07-01, 2020-09-30
-
-    section 2020 Q4
-    Jupyter Notebook, データ整形 :t6, 2020-10-01, 2020-12-31
-
-    section 2021 Q1
-    Selenium, SQL 基礎 :t7, 2021-01-01, 2021-03-31
-
-    section 2021 Q2
-    API連携, 自動出品 :t8, 2021-04-01, 2021-06-30
+    section 2020 Q3-2021 Q1
+    Selenium, SQL :t4, 2020-08-01, 2021-02-28
 ```
 
 ## パイプラインの構成
